@@ -79,6 +79,4 @@ export const createProject = async ({
     console.error("Failed to create project:", error);
     return null;
   }
-
-  // 1:32:52
 };
