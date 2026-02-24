@@ -29,7 +29,9 @@ const Navbar = () => {
           <div className="brand">
             <Box className="logo" />
 
-            <span className="name">Archify</span>
+            <span className="name">
+              <a href="/">Archify</a>
+            </span>
           </div>
 
           <ul className="links">
