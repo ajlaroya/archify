@@ -1,5 +1,5 @@
 import puter from "@heyputer/puter.js";
-import { ROOMIFY_RENDER_PROMPT } from "./constants";
+import { ARCHIFY_RENDER_PROMPT } from "./constants";
 
 // This function fetches an image from a URL and converts it to a data URL format
 export const fetchAsDataUrl = async (url: string): Promise<string> => {
@@ -30,7 +30,7 @@ export const generate3DView = async ({ sourceImage }: Generate3DViewParams) => {
 
   if (!mimeType || !base64Data) throw new Error("Invalid source image payload");
 
-  const response = await puter.ai.txt2img(ROOMIFY_RENDER_PROMPT, {
+  const response = await puter.ai.txt2img(ARCHIFY_RENDER_PROMPT, {
     provider: "gemini",
     model: "gemini-2.5-flash-image-preview",
     input_image: base64Data,
