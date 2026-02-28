@@ -85,8 +85,10 @@ export const createProject = async ({
       `${PUTER_WORKER_URL}/api/projects/save`,
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ project: payload, visibility }),
+        body: JSON.stringify({
+          project: payload,
+          visibility,
+        }),
       },
     );
 
